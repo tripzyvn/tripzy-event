@@ -14,4 +14,6 @@ type CloudEventProducer interface {
 	ProducePostEvent(postData *PostData) error
 	// ProduceLocationSuggestionEvent creates and sends a location suggestion event
 	ProduceLocationSuggestionEvent(suggestionData *LocationSuggestionData) error
+	// ProduceTrendingScoreEvent creates and sends a trending score event
+	ProduceTrendingScoreEvent(trendingScoreData *TrendingScoreData) error
 }

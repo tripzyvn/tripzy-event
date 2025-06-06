@@ -52,3 +52,18 @@ type AnalysisData struct {
 	Results        map[string]interface{} `json:"results"`
 	CreatedAt      time.Time              `json:"created_at"`
 }
+
+// TrendingScoreData represents the data field of a trending score event
+type TrendingScoreData struct {
+	LocationID      string    `json:"location_id"`
+	TrendWindow     string    `json:"trend_window"`
+	MentionCount    int       `json:"mention_count"`
+	EngagementScore int       `json:"engagement_score"`
+	TrendingScore   float64   `json:"trending_score"`
+	TopHashtags     []string  `json:"top_hashtags"`
+	SentimentScore  float64   `json:"sentiment_score"`
+	RankInRegion    int       `json:"rank_in_region"`
+	Confidence      float64   `json:"confidence"`
+	LastMentionedAt time.Time `json:"last_mentioned_at"`
+	UpdatedAt       time.Time `json:"updated_at"`
+}
