@@ -30,6 +30,19 @@ type GeoHint struct {
 	Lon float64 `json:"lon"`
 }
 
+// LocationSuggestionData represents the data field of a location suggestion event
+type LocationSuggestionData struct {
+	GuessedName     string    `json:"guessed_name"`
+	SuggestedBy     string    `json:"suggested_by"`
+	OriginalCaption string    `json:"original_caption"`
+	SourcePostURL   string    `json:"source_post_url"`
+	Hashtags        []string  `json:"hashtags"`
+	EstimatedRegion string    `json:"estimated_region"`
+	GeoHint         *GeoHint  `json:"geo_hint,omitempty"`
+	CreatedAt       time.Time `json:"created_at"`
+	Confidence      float64   `json:"confidence"`
+}
+
 // AnalysisData represents the data field of an analysis event
 type AnalysisData struct {
 	TaskID         string                 `json:"task_id"`
