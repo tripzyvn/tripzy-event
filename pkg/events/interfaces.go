@@ -4,6 +4,8 @@ package events
 type CloudEventConsumer interface {
 	// ConsumePostEvent processes a post event
 	ConsumePostEvent(event *CloudEvent) (*PostData, error)
+	// ConsumeLocationSuggestionEvent processes a location suggestion event
+	ConsumeLocationSuggestionEvent(event *CloudEvent) (*LocationSuggestionData, error)
 }
 
 // CloudEventProducer defines the interface for producing CloudEvents
