@@ -2,7 +2,7 @@ module github.com/tripzyvn/tripzy-event
 
 go 1.24.1
 
-require github.com/cloudevents/sdk-go/v2 v2.16.0
+require github.com/cloudevents/sdk-go/v2 v2.16.2
 
 require (
 	github.com/json-iterator/go v1.1.12 // indirect
